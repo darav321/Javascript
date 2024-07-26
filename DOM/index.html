@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Intro</title>
+</head>
+<body style="background-color: #212121; color:aliceblue">
+    <h1>This is my first DOM Introduction</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui eius tempora maxime quam repudiandae libero nam accusamus cumque fugit corporis.
+    </p>
+    <ul class="first">
+        <li class="second">Monday</li>
+        <li class="second">Tuesday</li>
+        <li class="second">Wednesday</li>
+        <li class="second">Thursday</li>
+        <li class="second">Friday</li>
+    </ul>
+</body>
+<script>
+    const myul = document.querySelector('.first')
+    console.log(myul)
+    console.log(myul.children)
+    
+    const div = document.createElement('div')
+    div.className = "main"
+    div.id = Math.round((Math.random()*10) + 1)
+    div.setAttribute("title", "Varad Kale")
+    div.style.backgroundColor = "grey"
+    div.style.color = "white"
+    div.innerText = "Varad Kale" // Not preferred
+    const addText = document.createTextNode("varad kale")
+    div.appendChild(addText)
+    document.body.appendChild(div) 
+    div.style.width = "200px"
+    div.style.height = "50px"
+    
+</script>
+</html>

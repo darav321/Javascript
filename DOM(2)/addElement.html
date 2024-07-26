@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Element</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLang("python")
+    addLang("typescript")
+
+    // Optimised Approach
+    function addOptiLang(langName)
+    {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLang("C++ the best language")
+
+    // Editing
+    const lang = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement('li')
+    newli.textContent = "Ruby"
+    lang.replaceWith(newli)
+</script>
+</html>
